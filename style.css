@@ -1,0 +1,170 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* COLORES BASE */
+:root {
+  --vino: #7b1e3c;
+  --vino-suave: #a63a5d;
+  --fondo: #faf6f3;
+  --blanco: #ffffff;
+  --texto: #2c2c2c;
+  --gris: #777;
+}
+
+/* BODY */
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, var(--vino), var(--vino-suave));
+  color: var(--blanco);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* MAIN */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* SECCIONES */
+section {
+  background-color: var(--blanco);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: var(--vino);
+}
+
+/* FORMULARIO */
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+input,
+select,
+textarea {
+  margin-top: 0.4rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--vino);
+}
+
+/* BOTÓN */
+button {
+  background-color: var(--vino);
+  color: var(--blanco);
+  border: none;
+  padding: 0.9rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--vino-suave);
+}
+
+/* LISTA DE VINOS */
+.vino-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* CARD VINO */
+.vino-card {
+  background-color: var(--fondo);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.vino-card h3 {
+  color: var(--vino);
+  font-size: 1.1rem;
+}
+
+.vino-card .rating {
+  color: #f4b400;
+  font-size: 1rem;
+}
+
+.vino-card .usuario {
+  font-size: 0.75rem;
+  color: var(--gris);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: var(--gris);
+}
+
+.delete-btn {
+  margin-top: 0.6rem;
+  background-color: transparent;
+  color: #b00020;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}

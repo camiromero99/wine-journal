@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wine Journal ❤️🍷</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#7b1e3c">
+
 </head>
+
 <body>
-$END$
+
+<header>
+    <h1>🍷 Nuestro Diario de Vinos</h1>
+
+</header>
+
+<main>
+
+    <!-- FORMULARIO -->
+    <section class="form-section">
+        <h2>Agregar vino</h2>
+
+        <form id="vinoForm">
+            <label>
+                Nombre del vino
+                <input type="text" id="nombre" placeholder="Ej: Malbec Reserva" required>
+            </label>
+
+            <label>
+                Bodega
+                <input type="text" id="bodega" placeholder="Ej: Catena Zapata">
+            </label>
+
+            <label>
+                Varietal
+                <input type="text" id="varietal" placeholder="Ej: Malbec">
+            </label>
+
+            <label>
+                Calificación
+                <select id="rating">
+                    <option value="1">⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                </select>
+            </label>
+
+            <label>
+                Comentario
+                <textarea id="comentario" placeholder="¿Qué les pareció?"></textarea>
+            </label>
+
+            <label>
+                ¿Quién lo carga?
+                <select id="usuario">
+                    <option value="Camila">Camila</option>
+                    <option value="Él">Valentin</option>
+                </select>
+            </label>
+
+            <button type="submit">Guardar vino 🍷</button>
+        </form>
+    </section>
+
+    <!-- LISTA -->
+    <section class="list-section">
+        <h2>Vinos probados</h2>
+
+        <div id="vinoLista" class="vino-lista">
+            <!-- Acá se insertan las cards por JS -->
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Hecho con ❤️ y vino</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
